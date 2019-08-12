@@ -1,0 +1,19 @@
+{
+  "name": "react-redux-saga-swagger-apinchofmagic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhoffmannDEV/react-redux-saga-swagger-aPinchOfMagic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhoffmannDEV/react-redux-saga-swagger-aPinchOfMagic/issues"
+  },
+  "homepage": "https://github.com/mhoffmannDEV/react-redux-saga-swagger-aPinchOfMagic#readme"
+}
