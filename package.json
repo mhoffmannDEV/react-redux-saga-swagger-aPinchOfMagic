@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "srv:dev": "node node/devServer.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mhoffmannDEV/react-redux-saga-swagger-aPinchOfMagic/issues"
   },
-  "homepage": "https://github.com/mhoffmannDEV/react-redux-saga-swagger-aPinchOfMagic#readme"
+  "homepage": "https://github.com/mhoffmannDEV/react-redux-saga-swagger-aPinchOfMagic#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "opn": "^6.0.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
 }
