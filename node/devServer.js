@@ -1,10 +1,18 @@
 const opn = require('opn')
+const express = require('express')
+const webpack = require('webpack')
 
+const devConfig = require ('../webpack/config.dev')
+const compiler = webpack(devConfig)
 
-const server = require('express')()
+const server = express()
 
-server.listen(3001, () => {
-  opn(`http://localhost:3001`)
+const PORT = 3002
 
-  console.log(`Dev server available on http://localhost:3001\n`)
-})
+server
+  .use(require('webpack-dev-middleware')(compiler, {}))
+  .listen(PORT, () => {
+    opn(`http://localhost:${PORT}`)
+
+    console.log(`Dev server available on http://localhost:${PORT}\n`)
+  })
