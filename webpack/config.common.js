@@ -1,8 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const configuration = require('../node/configuration')
 const srcDir = path.resolve(__dirname, '../src')
-const INDEX_HTML = 'index.html'
+const INDEX_HTML = configuration.INDEX_HTML
+
 
 module.exports = {
   entry: {
