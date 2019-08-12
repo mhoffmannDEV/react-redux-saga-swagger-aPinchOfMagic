@@ -1,10 +1,8 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 
+import { App } from 'app'
 
 render((
-  <>
-    <p>Witajcie Kochani!</p>
-    <p>dalej będziej już tylko ciekawiej i trudniej</p>
-  </>
+  <App />
 ), document.getElementById('root'))
