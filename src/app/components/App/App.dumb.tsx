@@ -1,11 +1,13 @@
 import * as React from 'react'
+import { Route } from 'react-router-dom'
 
-import { Login } from '../../external'
+import { Login, Layout, routePaths } from '../../external'
 
 
 const App = () => (
   <>
-    <Login />
+    <Route component={Login} exact path={routePaths.LOGIN} />
+    <Route component={Layout} path={routePaths.HOME} />
   </>
 )
 

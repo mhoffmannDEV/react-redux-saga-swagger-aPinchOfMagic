@@ -1,12 +1,13 @@
 import * as React from 'react'
 
 
-const Login = () => (
+const Login = ({ handleLogin }) => (
   <>
     <span>Login</span>
     <input />
     <span>Hasło</span>
     <input />
+    <button onClick={handleLogin}>wyślij</button>
   </>
 )
 
