@@ -1,8 +1,9 @@
 import { history } from 'generic/core'
-import { routePaths } from 'common/core'
+import { actions, routePaths } from 'common/core'
 
 
 export {
+  actions,
   history,
   routePaths,
 }

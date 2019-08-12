@@ -1,10 +1,20 @@
-import { withHandlers } from 'recompose'
+import { compose, withHandlers } from 'recompose'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
 
-import { history, routePaths } from '../../external'
+import { actions } from '../../external'
 
 import Login from './Login.dumb'
 
 
-export default withHandlers({
-  handleLogin: () => () => history.push(routePaths.HOME)
-})(Login)
+const ExtendedLogin = compose<any, any>(
+  connect(undefined, (dispatch: Dispatch) => ({
+    navigateToHome: () => dispatch(actions.userLogin.started({}))
+  })),
+  withHandlers({
+    handleLogin: ({ navigateToHome }) => () => navigateToHome(),
+  }),
+)(Login)
+
+
+export default ExtendedLogin
