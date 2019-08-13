@@ -60,3 +60,18 @@ Linter dla formatu .md.
 
 Goto Last Edit (0.6.4)
 Pozwala przełączać pomiędzy zmianami w kodzie (przód/ tył CTRL-/CTRL=)
+
+
+1b. ustawienia edytora:
+.vscode/settings.json
+{
+editor.minimap.enabled: false,
+editor.lineNumbers: "off",
+files.exclude: {
+**/node_modules: true,
+**/public: true,
+**/.cache: true
+},
+files.eol: "\n",
+jestrunner.jestPath: "clientSide/node_modules/jest/bin/jest.js"
+}
