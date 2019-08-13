@@ -1,0 +1,58 @@
+#########################################
+openapi: 3.0.2
+#########################################
+
+#########################################
+info:
+  #########################################
+  title: Szkolonko
+  description: Szkolonko ze swagger
+  version: 1.0.0
+
+#########################################
+servers:
+  #########################################
+  - url: http://localhost:3000/api
+    description: local server
+
+#########################################
+paths:
+#########################################
+  /auth/login/submit:
+    post:
+      tags:
+        - auth
+      summary: login submit
+      operationId: submitLogin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    userName:
+                      type: string
+                      example: janKowalski69
+                    password:
+                      type: string
+                      example: misiaczek123!
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        example: jan
+                      surname:
+                        type: string
+                        example: kowalski

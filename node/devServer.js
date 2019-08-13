@@ -9,10 +9,13 @@ const compiler = webpack(devConfig)
 
 const server = express()
 
-const PORT = configuration.PORTS.DEV_SERVER
+const { DEV_SERVER: PORT, MOCK_SERVER: PORT_MOCK } = configuration.PORTS
 
 server
   .use(require('webpack-dev-middleware')(compiler, {}))
+  .use('/api', require('http-proxy-middleware')({
+    target: `http://localhost:${PORT_MOCK}`,
+  }))
   // osługa przekierowania dla SPA (w parze z connect-history-api-fallback)
   .use('*', (request, response, next) => compiler.outputFileSystem.readFile(
     path.join(compiler.outputPath, configuration.INDEX_HTML),
