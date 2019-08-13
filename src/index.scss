@@ -1,0 +1,56 @@
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('./assets/fonts/open-sans-v16-latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./assets/fonts/open-sans-v16-latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+$openSans: 'Open Sans';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+$line-height: 1.5;
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+body {
+  background-color: #fff;
+  color: get('requirements.colors.shark');
+  font-family: $openSans;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+button {
+  font-family: $openSans;
+  line-height: $line-height;
+  padding: 0px 6px;
+}
+
+button:focus {
+  outline:0;
+}
+
+input {
+  font-family: $openSans;
+}
+
+textarea {
+  font-family: $openSans;
+}
+
+select {
+  font-family: $openSans;
+}

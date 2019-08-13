@@ -8,7 +8,7 @@ import { history } from 'generic/core'
 import { store } from 'common/core'
 
 import { App } from 'app'
-
+import 'index.scss'
 
 render((
   <Provider store={store}>
